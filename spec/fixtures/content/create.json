@@ -1,0 +1,44 @@
+{
+  "response": {
+    "id": "111111111111111",
+    "idea_title": null,
+    "content_title": "It really tied the room together",
+    "creator_id": "111111111111111",
+    "assignee_id": "111111111111111",
+    "campaign_ids": [],
+    "is_draft": false,
+    "submission_deadline": null,
+    "publish_deadline": null,
+    "next_task": "Completed",
+    "updated_at": "2013-11-02T17:09:22Z",
+    "idea": null,
+    "content": "",
+    "tags": [],
+    "custom_fields": [
+      {
+        "id": "111111111111111",
+        "field_type": "select",
+        "display_label": "FOO",
+        "name": "FOO",
+        "created_at": "2013-06-14T21:05:23Z",
+        "select_values": [
+          "Foo",
+          "Bar",
+          "Baz"
+        ],
+        "options": {
+          "editor_or_admin_only": false,
+          "required_field": false
+        },
+        "value": "bar"
+      }
+    ],
+    "persona_ids": [],
+    "stage_ids": [],
+    "attachments": [],
+    "content_type": {
+      "id": "111111111111111",
+      "display_name": "Foo Content Type"
+    }
+  }
+}

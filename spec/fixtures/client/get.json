@@ -1,0 +1,17 @@
+{
+    "response": {
+        "submission_deadline": null,
+        "content_title": "Maude",
+        "updated_at": "2013-11-02T17:09:22Z",
+        "next_task": "Completed",
+        "publish_deadline": null,
+        "id": "111111111111111",
+        "idea_title": null,
+        "is_draft": false,
+        "campaign_ids": [
+
+        ],
+        "creator_id": "111111111111111",
+        "assignee_id": "111111111111111"
+    }
+}
