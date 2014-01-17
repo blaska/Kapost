@@ -25,8 +25,8 @@ Common usage:
     require 'kapost'
 
     Kapost.configure do |config|
-      config.api_key  = ENV['KAPOST_API_KEY']
-      config.instance = ENV['KAPOST_INSTANCE']
+      config.api_token = ENV['KAPOST_API_KEY']
+      config.instance  = ENV['KAPOST_INSTANCE']
     end
 
     client = Kapost::Client.new
@@ -35,7 +35,7 @@ Alternatively:
 
     require 'kapost'
 
-    client = Kapost::Client.new(:api_key => ENV['KAPOST_API_KEY'], :instance => ENV['KAPOST_INSTANCE'])
+    client = Kapost::Client.new(:api_token => ENV['KAPOST_API_KEY'], :instance => ENV['KAPOST_INSTANCE'])
 
 ### Showing content
 
