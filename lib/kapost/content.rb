@@ -4,7 +4,7 @@ module Kapost
     CREATE_PARAMS = [
       :idea_title, :idea, :content_title, :content, :assignee_id, :privacy, :invitee_ids, :is_draft,
       :campaign_ids, :submission_deadline, :publish_deadline, :payment_type, :payment_fixed_rate, :tags, :external_file_url,
-      :persona_ids, :stage_ids, :content_type_id
+      :persona_ids, :stage_ids, :content_type_id, :custom_fields
     ]
     LIST_PARAMS = [
       :detail, :page, :per_page, :user_id, :campaign_id, :category, :include_empty_categories,
