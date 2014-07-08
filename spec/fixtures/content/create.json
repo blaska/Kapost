@@ -1,8 +1,7 @@
 {
   "response": {
     "id": "111111111111111",
-    "idea_title": null,
-    "content_title": "It really tied the room together",
+    "title": "It really tied the room together",
     "creator_id": "111111111111111",
     "assignee_id": "111111111111111",
     "campaign_ids": [],

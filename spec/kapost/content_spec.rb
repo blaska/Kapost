@@ -22,10 +22,10 @@ describe Kapost::Content do
     stub_request(:get, /https:\/\/foo:@bar.kapost.com\/api\/v1\/content\/lebowski?.*detail=full.*/)
       .to_return(:body => show_full, :status => 200, :headers => {})
     stub_request(:post, "https://foo:@bar.kapost.com/api/v1/content")
-      .with(:body => {"content_title"=>"It really tied the room together", "content_type_id"=>"11111111"})
+      .with(:body => {"title"=>"It really tied the room together", "content_type_id"=>"11111111"})
       .to_return(:body => create, :status => 201, :headers => {})
     stub_request(:put, "https://foo:@bar.kapost.com/api/v1/content/lebowski")
-      .with(:body => {"content_title"=>"This will not stand, man", "content_type_id"=>"11111111", "id"=>"lebowski"})
+      .with(:body => {"title"=>"This will not stand, man", "content_type_id"=>"11111111", "id"=>"lebowski"})
       .to_return(:body => update, :status => 200, :headers => {})
     stub_request(:delete, "https://foo:@bar.kapost.com/api/v1/content/lebowski?id=lebowski")
       .to_return(:status => 204, :body => "", :headers => {})
@@ -49,8 +49,8 @@ describe Kapost::Content do
   context "Creating Content" do
 
     it "creates content when required parameters are passed" do
-      response = @client.create_content(:content_title => "It really tied the room together", :content_type_id => '11111111')
-      expect(response[:content_title]).to match(/It really tied the room together/)
+      response = @client.create_content(:title => "It really tied the room together", :content_type_id => '11111111')
+      expect(response[:title]).to match(/It really tied the room together/)
     end
 
     it "returns an error if required parameters are not passed" do
@@ -58,7 +58,7 @@ describe Kapost::Content do
     end
 
     it "returns false if invalid parameters are passed" do
-      expect(@client.show_content({:fake_param => 'lebowski'})).to be_false
+      expect(@client.show_content({:fake_param => 'lebowski'})).to be_falsey
     end
 
   end
@@ -66,7 +66,7 @@ describe Kapost::Content do
   context "Showing Content" do
     it "shows content when required parameters are passed" do
       response = @client.show_content({:id => 'lebowski', :detail => 'full'})
-      expect(response[:content_title]).to be_true
+      expect(response[:title]).to be_truthy
     end
 
     it "returns an error if required parameters are not passed" do
@@ -74,14 +74,14 @@ describe Kapost::Content do
     end
 
     it "returns false if invalid parameters are passed" do
-      expect(@client.show_content({:id => 'lebowski', :fake_param => 'lebowski'})).to be_false
+      expect(@client.show_content({:id => 'lebowski', :fake_param => 'lebowski'})).to be_falsey
     end
   end
 
   context "Updating Content" do
     it "updates content when required parameters are passed" do
-      response = @client.update_content(:id => 'lebowski', :content_title => "This will not stand, man", :content_type_id => '11111111')
-      expect(response[:content_title]).to match(/This will not stand, man/)
+      response = @client.update_content(:id => 'lebowski', :title => "This will not stand, man", :content_type_id => '11111111')
+      expect(response[:title]).to match(/This will not stand, man/)
     end
 
     it "returns an error if required parameters are not passed" do
@@ -89,13 +89,13 @@ describe Kapost::Content do
     end
 
     it "returns an error if invalid parameters are passed" do
-      expect(@client.update_content({:fake_param => 'lebowski'})).to be_false
+      expect(@client.update_content({:fake_param => 'lebowski'})).to be_falsey
     end
   end
 
   context "Deleting Content" do
     it "deletes content when required parameters are passed" do
-      expect(@client.delete_content({:id => 'lebowski'})).to be_true
+      expect(@client.delete_content({:id => 'lebowski'})).to be_truthy
     end
 
     it "returns an error if required parameters are not passed" do
@@ -103,7 +103,7 @@ describe Kapost::Content do
     end
 
     it "returns false if invalid parameters are passed" do
-      expect(@client.delete_content({:fake_param => 'lebowski'})).to be_false
+      expect(@client.delete_content({:fake_param => 'lebowski'})).to be_falsey
     end
   end
 

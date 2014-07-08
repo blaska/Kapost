@@ -2,8 +2,7 @@
     "response": [
         {
             "id": "1111111111111111",
-            "idea_title": null,
-            "content_title": "Do you have to use so many cuss words?",
+            "title": "Do you have to use so many cuss words?",
             "creator_id": "1111111111111111",
             "assignee_id": null,
             "campaign_ids": [],
@@ -15,8 +14,7 @@
         },
         {
             "id": "22222222222222222",
-            "idea_title": null,
-            "content_title": "No Donny, these men are nihilists. There's nothing to be afraid of.",
+            "title": "No Donny, these men are nihilists. There's nothing to be afraid of.",
             "creator_id": "1111111111111111",
             "assignee_id": null,
             "campaign_ids": [],

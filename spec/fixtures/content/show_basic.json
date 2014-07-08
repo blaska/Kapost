@@ -1,7 +1,7 @@
 {
     "response": {
         "submission_deadline": null,
-        "content_title": "Foo",
+        "title": "Foo",
         "updated_at": "2013-11-02T17:09:22Z",
         "next_task": "Completed",
         "publish_deadline": null,

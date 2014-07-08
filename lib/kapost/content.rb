@@ -2,7 +2,7 @@ module Kapost
   module Content
 
     CREATE_PARAMS = [
-      :idea_title, :idea, :content_title, :content, :assignee_id, :privacy, :invitee_ids, :is_draft,
+      :title, :idea, :content, :assignee_id, :privacy, :invitee_ids, :is_draft,
       :campaign_ids, :submission_deadline, :publish_deadline, :payment_type, :payment_fixed_rate, :tags, :external_file_url,
       :persona_ids, :stage_ids, :content_type_id, :custom_fields
     ]

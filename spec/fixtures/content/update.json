@@ -1,8 +1,7 @@
 {
   "response": {
     "id": "111111111111111",
-    "idea_title": null,
-    "content_title": "This will not stand, man",
+    "title": "This will not stand, man",
     "creator_id": "111111111111111",
     "assignee_id": "111111111111111",
     "campaign_ids": [],
